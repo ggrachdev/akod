@@ -1,0 +1,39 @@
+nav {
+    display: block;
+    background-color: #343a40;
+    height: 40px;
+}
+
+nav > * {
+    line-height: 40px;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    color: white;
+    font-weight: 600;
+}
+
+nav > .header {
+    font-size: 20px;
+    text-decoration: none;
+    /*animation: header_light 10s infinite;*/
+}
+
+@keyframes header_light {
+    0% {
+        color: white;
+    }
+    50% {
+        color: #97ff73;
+    }
+    100% {
+        color: white;
+    }
+}

@@ -1,0 +1,5 @@
+.idea/
+vendor/
+assets/temp/
+node_modules/
+/nbproject/private/

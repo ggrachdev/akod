@@ -1,0 +1,13 @@
+<?php
+
+include_once 'config.php';
+
+$name_console_file = basename(__FILE__);
+
+include_once $config['path']['modules'].'ConsoleCommand/1.0/ConsoleCommand.php';
+
+echo PHP_EOL;
+
+exec('php composer.phar dump-autoload -o');
+
+?>

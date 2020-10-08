@@ -1,0 +1,26 @@
+server {
+
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/66-666-66-66.test.test.ru/web;
+    index index.php index.html index.htm;
+
+    server_name _;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.(png|gif|ico|swf|jpe?g|js|css|ttf|svg|eot|woff|yml|xml|zip|txt|doc)$ {
+      # ничего не нужно, просто отдаём файлы
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass unix:/run/php/php7.1-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+

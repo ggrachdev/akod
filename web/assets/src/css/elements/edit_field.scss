@@ -1,0 +1,97 @@
+#tableData, #tableColumns {
+    overflow: auto;
+    width: 100%;
+    max-width: 100%;
+
+    table {
+        width: max-content;
+    } 
+}
+
+#modal_edit_field {
+
+    // Редактирование поля типа текст
+    &[data-type-field="text"]
+    {
+        textarea {
+            width: 100%;
+        }
+    }
+
+    // Редактирование поля типа текст
+    &[data-type-field="number"]
+    {
+        input {
+            width: 100%;
+        }
+    }
+
+    .field {
+        &__gallery {
+
+
+            &__input_photo {
+                display: block;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                background-color: #e7e7e7;
+                border-radius: 20px;
+            }
+
+            &__photo {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                display: inline-block;
+                margin-bottom: 15px;
+
+                [data-click="delete_photo_gallery"] {
+                    position: absolute;
+                    top: -7px;
+                    right: 2px;
+                    font-size: 20px;
+                    color: red;
+                    cursor: pointer;
+                    transition: 300ms;
+                    background: #FFF;
+                    border-radius: 50%;
+
+                    &:hover {
+                        color: darken(red, 10%);
+                    }
+                }
+
+                img {
+                    border-radius: 10px;
+                }
+            }
+
+
+            &__new_photo_add {
+                width: 70px;
+                display: inline-flex;
+                justify-content: center;
+                height: 70px;
+                align-items: center;
+                background-color: #e7e7e7;
+                border-radius: 20px;
+                margin-left: 10px;
+                transition: 300ms;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #d5d5d5;
+                }
+            }
+        }
+    }
+
+
+    /*  .modal-dialog {
+        max-width: 100%;
+      }*/
+
+    .edit_footer {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-12 col-md-6 m-auto">
+        <form class="form mt-20" data-form="form_sign_up" data-valid="js" data-action="check_sign_up_form" validator>
+            <div class="form__header">Регистрация нового пользователя:</div>
+            <div class="form__body">
+                <div class="form-group">
+                    <label for="sign_up_email">Email адрес:</label>
+                    <input name="email" data-type="email" type="email" class="form-control" id="sign_up_email"
+                           aria-describedby="emailHelp" placeholder="Введите email" autocomplete="off" required>
+                    <small data-error-element="email" class="form-text text-muted" style="display: none;">Текст ошибки
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="sign_up_surname">Фамилия:</label>
+                    <input name="surname" data-type="name" type="text" class="form-control" id="sign_up_surname"
+                           aria-describedby="emailHelp" placeholder="Введите фамилию" autocomplete="off" required>
+                    <small data-error-element="surname" class="form-text text-muted" style="display: none;">Текст
+                        ошибки
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="sign_up_name">Имя:</label>
+                    <input name="name" data-type="name" type="text" class="form-control" id="sign_up_name"
+                           aria-describedby="emailHelp" placeholder="Введите имя" autocomplete="off" required>
+                    <small data-error-element="name" class="form-text text-muted" style="display: none;">Текст ошибки
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="sign_up_patronymic">Отчество:</label>
+                    <input name="patronymic" data-type="name" type="text" class="form-control" id="sign_up_patronymic"
+                           aria-describedby="emailHelp" placeholder="Введите отчество" autocomplete="off" required>
+                    <small data-error-element="patronymic" class="form-text text-muted" style="display: none;">Текст
+                        ошибки
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="sign_up_password">Пароль:</label>
+                    <input name="password" data-type="password" type="password" class="form-control"
+                           id="sign_up_password" placeholder=" Введите пароль" autocomplete="off" required>
+                    <small data-error-element="password" class="form-text text-muted" style="display: none;">Текст
+                        ошибки
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="sign_up_password_2">Повторите пароль:</label>
+                    <input name="password_2" data-type="password" type="password" class="form-control"
+                           id="sign_up_password_2" placeholder=" Введите пароль" autocomplete="off" required>
+                    <small data-error-element="password_2" class="form-text text-muted" style="display: none;">Текст
+                        ошибки
+                    </small>
+                </div>
+
+                <!--            <div class="form-group form-check">-->
+                <!--                <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+                <!--                <label class="form-check-label" for="exampleCheck1">Запомнить</label>-->
+                <!--            </div>-->
+
+                <div data-context="errors">
+                </div>
+
+                <button type="submit" class="btn btn-info">Зарегистрироваться</button>
+            </div>
+            <div class="form__loader" style="display: none;">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

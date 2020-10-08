@@ -1,0 +1,32 @@
+source tsv_index
+{
+ type = tsvpipe
+ tsvpipe_command = cat /var/www/66-666-66-66.test.test.ru/web/assets/files/other/index.tsv
+ tsvpipe_field = content
+ tsvpipe_attr_bigint = id_classifier
+ tsvpipe_attr_string = type_content
+}
+
+index ind_tsv
+{
+ source = tsv_index
+ path = /var/www/66-666-66-66.test.test.ru/web/assets/files/index/
+ morphology = stem_ru
+ expand_keywords = 1
+ index_exact_words = 1
+ min_infix_len = 3
+ min_word_len = 3
+}
+
+searchd
+{
+ listen = 127.0.0.1:9312
+ listen = 9306:mysql41
+ log = /var/log/sphinxsearch/searchd.log
+ query_log = /var/log/sphinx/query.log
+ query_log_format = sphinxql
+ read_timeout = 5
+ max_children = 1
+ pid_file = /var/run/sphinxsearch/searchd.pid
+ workers = threads
+}

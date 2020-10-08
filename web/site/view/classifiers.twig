@@ -1,0 +1,82 @@
+<div class="row full_screen" data-context="windows_catalog">
+
+    <div class="col-12 col-lg-3 left_panel" data-context="tree_catalog">
+        <h6>Структура классификатора:</h6>
+        <h6 data-context="error.not_load_classifier" class="text-secondary">- Загрузите классификатор для просмотра структуры</h6>
+        <div data-context="data_tree_catalog">
+
+        </div>
+
+        <div class="buttons_tree_catalog">
+            <i class="fa fa-file-word-o" data-click="get_word_file" title="Получить word файл" aria-hidden="true"></i>
+            <i onclick="window.print()" title="Распечатать контент" class="fa fa-print" aria-hidden="true"></i>
+            <i data-click="expand_tree_items" class="fa fa-expand" aria-hidden="true" title="Раскрыть узлы классификатора"></i>
+            <i data-click="compress_tree_items" class="fa fa-compress" aria-hidden="true" title="Скрыть узлы классификатора"></i>
+            <i data-click="hide_panel_tree" class="fa fa-caret-square-o-left" aria-hidden="true" title="Скрыть панель с деревом"></i>
+            <i data-click="show_panel_tree" class="fa fa-caret-square-o-right" aria-hidden="true" title="Раскрыть панель с деревом" style="display: none;"></i>
+        </div>
+    </div>
+
+    <div class="col center_panel wrapper_active_element_data">
+        <div class="breadcrumbs" style="display: none;"></div>
+        <div data-context="active_element_data"></div>
+    </div>
+
+    <div class="col-12 col-lg-3 right_panel" data-context="list_catalog">
+
+        <div class="right_panel__wrapper">
+
+            <h5>Искать классификаторы:</h5>
+            <div class="input-group mb-12">
+                <input type="text" data-input="search_classifiers" class="form-control" placeholder="Ключевые слова">
+                <div class="input-group-append">
+                    <button data-click="search_classifiers" class="btn btn-dark" type="button" id="button-addon2"><span class="fa fa-search"></span></button>
+                </div>
+            </div>
+
+            <div class="right_panel__search_params">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="search_from_name" checked>
+                    <label class="form-check-label" for="search_from_name">Искать по имени классификатора</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="search_from_item">
+                    <label class="form-check-label" for="search_from_item">Искать по имени узлов</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="search_from_content">
+                    <label class="form-check-label" for="search_from_content">Искать по контенту</label>
+                </div>
+            </div>
+
+            <section data-context="search_result"></section>
+            <hr>
+            <h5>Доступные классификаторы:</h5>
+            <section data-component="available_catalog_list"></section>
+            <hr>
+            <h5>Ваши классификаторы:</h5>
+            <section data-component="catalog_list"></section>
+            <hr>
+            <button class="btn btn-dark" type="button" data-toggle="modal" data-target="#modal_add_catalog">Добавить классификатор</button>
+        </div>
+
+
+        <div class="buttons_list_catalog">
+            <i data-click="hide_panel_classifiers" class="fa fa-caret-square-o-right" aria-hidden="true"></i>
+            <i data-click="show_panel_classifiers" class="fa fa-caret-square-o-left" aria-hidden="true" style="display: none;"></i>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    var User = {
+        name: '{{user.name}}',
+        surname: '{{user.surname}}',
+        patronymic: '{{user.patronymic}}'
+    };
+</script>
+

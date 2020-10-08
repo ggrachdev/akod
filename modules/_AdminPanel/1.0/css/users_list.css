@@ -1,0 +1,24 @@
+.user_list {
+    display: inline-block;
+}
+
+.user_list__item {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.user_list__item > div {
+    border: 1px solid #b5ccc4;
+}
+
+.user_list__header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #343a40;
+    color: white;
+}
+
+.user_list__header > div {
+}
+

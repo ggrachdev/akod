@@ -1,0 +1,9 @@
+.wrapper_active_element_data {
+  position: relative;
+  padding-top: 70px;
+}
+
+[data-context="active_element_data"]
+{
+  padding-top: 10px;
+}

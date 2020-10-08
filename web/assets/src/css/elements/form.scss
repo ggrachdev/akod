@@ -1,0 +1,38 @@
+[data-form="form_login"], [data-form="form_sign_up"] {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) !important;
+
+}
+
+.nicEdit-main {
+  padding: 5px !important;
+  min-height: 400px !important;
+}
+
+.form {
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  position: relative;
+
+  &__header {
+    text-align: center;
+    font-size: 20px;
+    background: #343a40 !important;
+    color: white;
+    padding: 3px;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    padding: 10px;
+  }
+
+  &__loader {
+    top: 50%;
+    left: 47%;
+    position: absolute;
+  }
+}
+
+.modal-body > .form {
+  box-shadow: none;
+}

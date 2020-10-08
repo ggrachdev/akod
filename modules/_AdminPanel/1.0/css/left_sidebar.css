@@ -1,0 +1,23 @@
+.content__left_sidebar {
+    width: 150px;
+    height: 100vh;
+    background: #343a40;
+    position: fixed;
+}
+
+.content__left_sidebar ul{
+    padding: 0px;
+}
+
+.content__left_sidebar li{
+    padding: 10px;
+}
+
+.content__left_sidebar li:hover{
+    background: #252a2e;
+    cursor: pointer;
+}
+
+.content__left_sidebar ul a {
+    color: white;
+}

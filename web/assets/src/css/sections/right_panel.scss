@@ -1,0 +1,11 @@
+.right_panel {
+    &__search_params { 
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__wrapper {
+        overflow: auto;
+        max-height: calc(100% - 36px);
+    }
+}

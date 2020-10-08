@@ -1,0 +1,63 @@
+[data-form="form_login"] {
+    margin-top: 20px;
+}
+
+[data-context="errors"] {
+    margin-bottom: 20px;
+    color: red;
+}
+
+[data-context="tree_catalog"],[data-context="active_element_data"],[data-context="list_catalog"] {
+    height: 100vh;
+    max-width: 100vw;
+    overflow-y: auto;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+[data-form="search_catalog"]
+{
+    margin-bottom: 10px;
+}
+
+[data-context="windows_catalog"] > div
+{
+    border: 1px #d0d0d0 solid;
+}
+
+[data-context="user_catalog"] > button
+{
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+.full_screen
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.navbar
+{
+    z-index: 100;
+}
+
+input.input_error {
+    border-color: red;
+    border-width: 2px;
+}
+
+.w-10
+{
+    width: 10%;
+}
+
+.w-5
+{
+    width: 5%;
+}

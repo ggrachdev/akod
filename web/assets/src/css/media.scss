@@ -1,0 +1,132 @@
+@media screen and (max-width: 992px) {
+    
+    .navbar__user {
+        display: none;
+    }
+
+    #system-alert-wrapper {
+        display: flex !important;    
+        justify-content: center !important;
+        right: 0 !important;
+        width: 100% !important;
+
+        > div {
+            width: 94% !important;
+            padding-right: 34px !important;
+            max-width: 300px !important;
+        }
+    }
+
+    [data-context="windows_catalog"] > div {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        border-left: unset;
+        border-right: unset;
+    }
+
+    .row.full_screen
+    {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .fa.fa-print {
+        display: none;
+    }
+
+    .right_panel {
+        padding: 20px !important;
+        height: auto;
+    }
+
+    .center_panel {
+        padding: 20px !important;
+        flex: 100%;
+        height: auto;
+    }
+
+    [data-click="hide_panel_classifiers"]
+    {
+        display: none;
+
+    }
+
+    [data-click="hide_panel_tree"]
+    {
+        display: none;
+    }
+    
+    .error.not_load_classifier {
+        padding-right: 20px;
+    }
+    
+    .right_panel__wrapper {
+        max-height: unset;
+    }
+
+    [data-context="panel_edit"]
+    {
+        right: 73px;
+        width: 180px;
+        line-height: 17px;
+        border-right: unset;
+        position: absolute;
+
+        [data-click="panel_edit_mode"]
+        {
+            width: 180px;
+        }
+    }
+
+    [data-form="form_edit_catalog"]
+    {
+        .modal-footer {
+            flex-wrap: wrap;
+
+            > button {
+                margin: 5px;
+            }
+        }
+    }
+
+    #tableData, #tableColumns {
+        overflow: auto;
+        width: 100%;
+        max-width: 100%;
+
+        table {
+            width: max-content;
+            font-size: 13px;
+
+            button {
+                width: 30px;
+                display: inline-flex;
+                height: 30px;
+                justify-content: center;
+                align-items: center;
+                margin: 5px;
+
+                i {
+                    font-size: 15px;
+                }
+            }
+
+            input {
+                font-size: 13px;
+            }
+        } 
+    }
+
+    [data-item-wrapper="table"]
+    {
+        table {
+            font-size: 13px;
+        }
+    }
+
+    [data-item-wrapper="text"]
+    {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,11 @@
+{% extends "main.twig" %}
+
+{% block body %}
+
+{# Выведем текст родителя: #}
+{{ parent() }}
+
+Какой-нибудь текст:
+{{var}}
+
+{% endblock %}

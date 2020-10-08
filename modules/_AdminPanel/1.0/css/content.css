@@ -1,0 +1,49 @@
+.content__blocks {
+    padding: 20px;
+}
+
+.content_padding_left {
+    padding-left: 170px;
+}
+
+.table .header {
+    background-color: #0f6674;
+    color: white;
+    display: inline-block;
+}
+
+.table .header div{
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #0f6674;
+}
+
+.table .ceil{
+    display: inline-block;
+    padding: 10px;
+    background: white;
+    border: 1px solid #b5ccc4;
+}
+
+
+
+.ceil_vsmall {
+    width: 50px;
+    padding: 10px;
+}
+
+.ceil_small {
+    width: 100px;
+    padding: 10px;
+}
+
+.ceil_middle {
+    width: 200px;
+    padding: 10px;
+}
+
+.ceil_big {
+    width: 300px;
+    padding: 10px;
+}
+

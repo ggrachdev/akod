@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/admin_css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+{% block header %}
+    <nav class="d-f fw-w">
+        <a href="/{{ root }}" class="header fb-10 d-ib ta-c">
+            Olga<b>CMS</b>
+        </a>
+        <div>
+
+            {% for item in menu %}
+                {% if item.url == url %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/{{ root }}/{{ item.url }}">{{ item.name }}</a>
+                    </li>
+                {% else %}
+                    <a href="/{{ root }}/{{ item.url }}" class="d-ib">{{ item.name }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </nav>
+{% endblock %}
+
+<div class="content">
+    {% if show_left_sidebar == true %}
+        <div class="content__left_sidebar">
+            <ul>
+                {% for menu_1 in left_sidebar_menu %}
+                    <li onclick="location.href = '{{ menu_1.link }}';"><a href="{{ menu_1.link }}">{{ menu_1.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    <div class="content__blocks
+        {% if show_left_sidebar == true %} content_padding_left {% endif %}
+        {% if align_left == true %} ta-l {% endif %}
+        {% if align_center == true %} ta-c {% endif %}
+        {% if align_right == true %} ta-r {% endif %}
+        ">
+        {% block body %}
+            {% for item in blocks %}
+                {% include(item) %}
+            {% endfor %}
+        {% endblock %}
+    </div>
+</div>
+
+{% include "modals.twig" %}
+
+
+
+{% block footer %}
+{% endblock %}
+
+<script src="/scripts"></script>
+<script>
+    system.root_admin = '{{ root }}';
+    system.sk = '{{ sk }}';
+    system.is_admin = true;
+</script>
+<script src="/admin_js"></script>
+</body>
+</html>
